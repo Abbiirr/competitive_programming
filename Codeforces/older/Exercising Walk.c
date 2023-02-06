@@ -1,0 +1,66 @@
+#include<stdio.h>
+int main()
+{
+    int t,a,b,c,d,x,y,x1,y1,x2,y2,i;
+    scanf("%d",&t);
+    for(i=1;i<=t;i++)
+    {
+        scanf("%d%d%d%d%d%d%d%d%d%d",&a,&b,&c,&d,&x,&y,&x1,&y1,&x2,&y2);
+        if(x-a<x1)
+        {
+            if(x+b>x2)
+            {
+                printf("No\n");
+                continue;
+            }
+            else
+                x=x+b;
+            if(x-a<x1)
+            {
+               printf("No\n");
+                continue;
+            }
+        }
+        else
+        {
+            x=x-a;
+            if(x+b>x2)
+            {
+                printf("No\n");
+                continue;
+            }
+            else
+                x=x-a;
+        }
+        if(y-c<y1)
+        {
+            if(y+d>y2)
+            {
+                printf("No\n");
+                continue;
+            }
+            else
+                y=y+d;
+            if(y-c<y1)
+            {
+               printf("No\n");
+                continue;
+            }
+        }
+        else
+        {
+            y=y-c;
+            if(y+d>y2)
+            {
+                printf("No\n");
+                continue;
+            }
+            else
+                y=y-c;
+        }
+        printf("Yes\n");
+    }
+
+    return 0;
+}
+
